@@ -1,4 +1,4 @@
-\documentclass[11pt,a4]{article}
+\documentclass[11pt,a4paper]{article}
 \usepackage{amsmath}
 \usepackage{parskip}
 
@@ -70,4 +70,14 @@ Newtonian fluid: $S_{ij}$ is a linear combination of $\pardiff{v_i}{x_j}$. $\vec
 $$
 	S_{ij} = a \left( \pardiff{v_i}{x_j} + \pardiff{v_j}{x_i} \right) + b \delta_{ij}(\nabla \cdot \vec v).
 $$
+If $S_{ij} = 0$ (not pressure):
+\begin{align*}
+  0 &= 2a \nabla \cdot \vec v + 3b \nabla \cdot \vec v \\
+  a &= \mu \\
+  b &= -\frac{2}{3} \mu \\[6pt]
+  S_{\text{total}_ij} &= -p \delta_{ij} + S_{ij} \\[6pt]
+  \vec F_{v,i} &= \mu \left[ \nabla^2 v_i + \pardiff{}{x_i} ( \nabla \cdot \vec v ) \right]
+                - \frac{2}{3} \mu \pardiff{}{x_i} (\nabla \cdot \vec v) \\
+  \vec F_v &= \mu \nabla^2 \vec v + \frac{1}{3} \mu \nabla (\nabla \cdot \vec v)
+\end{align*}
 \end{document}
